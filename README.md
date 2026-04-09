@@ -2,7 +2,7 @@
 ## Autonomous Obstacle-Avoiding Robot
 An intelligent, self-navigating mobile robot built with Arduino. This project utilizes a triple-sensor ultrasonic array to detect environmental hazards and autonomously navigate through complex paths without human intervention.
 
-### 🚀 Project Overview
+### Project Overview
 This robot mimics basic biological navigation by constantly "scanning" its surroundings. Unlike standard single-sensor builds, this version uses three HC-SR04 sensors (Front, Left, and Right) to eliminate blind spots and provide a 180-degree field of awareness.
 
 The system operates on a Sense-Think-Act logic loop:
@@ -13,18 +13,16 @@ Think: Processes data via the NewPing library to determine the clearest path.
 
 Act: Controls a DC motor drive system to pivot away from obstacles and resume forward motion.
 
-### 🚀 Project Overview
-This robot mimics basic biological navigation by constantly "scanning" its surroundings. Unlike standard single-sensor builds, this version uses three HC-SR04 sensors (Front, Left, and Right) to eliminate blind spots and provide a 180-degree field of awareness.
+###  Key Features
+Triple-Sensor Fusion: Real-time distance monitoring from three directions for superior obstacle avoidance.
 
-The system operates on a Sense-Think-Act logic loop:
+Intelligent Pathfinding: Instead of turning randomly, the robot compares lateral clearances and chooses the side with more open space.
 
-Sense: Measures distances in three directions using ultrasonic pulses.
+Non-Blocking Code: Utilizes the NewPing library for faster, more reliable sensor pings compared to standard pulseIn methods.
 
-Think: Processes data via the NewPing library to determine the clearest path.
+Hardware Protection: Includes programmed "braking" delays to protect the motor driver from back-EMF voltage spikes during sudden direction changes.
 
-Act: Controls a DC motor drive system to pivot away from obstacles and resume forward motion.
-
-### 🔧 Hardware Requirements
+###  Hardware Requirements
 Microcontroller: Arduino Uno (or compatible)
 
 Sensors: 3x HC-SR04 Ultrasonic Sensors
